@@ -9,17 +9,24 @@ header {
     background-color: #2C3333;
     color: white;
     padding: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    /* shadow code below is not mine...idk how it works */
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
+    box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
 }
 
-.flex-dead-center {
+.total-center-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.space-btw-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header--menus li {
