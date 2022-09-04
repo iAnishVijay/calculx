@@ -3,45 +3,50 @@ import InputField from "./InputField";
 import RadioButton from "./RadioButton";
 
 export default function Main() {
-    const [input, setInput] = useState();
-    const handleChange = (event) => {
-        setInput(event.target.value);
-        calculateGst();
-    }
-    const [gstRate, setgstRate] = useState("");
-    const handleRadioClick = (event) => {
-        setgstRate((event.target.value).toString());
-    }
     const [result, setResult] = useState();
-    const calculateGst = () => {
-        setResult(input * parseInt(gstRate) * 0.01);
+    const [inputs, setInputs] = useState(
+        {
+            textInput: 0,
+            gstRate: ""
+        }
+    );
+    const handleChange = (event) => {
+        setInputs(prev => ({
+            ...prev,
+            [event.target.name]: event.target.value
+        }));
     }
-    console.log(`gst rate set to ${gstRate}`);
-    console.log(`result is now ${result}`);
+    React.useEffect(() => {
+        setResult(inputs.textInput * parseInt(inputs.gstRate) * 0.01);
+    }, [inputs.textInput, inputs.gstRate]);
     return (
         <main className="calculator">
             <InputField
+                name="textInput"
                 handleChange={handleChange}
             />
-            <h2>{result}</h2>
+            <h2>{inputs.gstRate && result}</h2>
             <div className="gst-buttons total-center-flex">
                 <RadioButton
-                    gstRate={12}
+                    name="gstRate"
+                    gstRate="12"
                     value="12"
-                    checked={gstRate === 12}
-                    radioChange={handleRadioClick}
+                    checked={inputs.gstRate === "12"}
+                    radioChange={handleChange}
                 />
                 <RadioButton
-                    gstRate={18}
+                name="gstRate"
+                    gstRate="18"
                     value="18"
-                    checked={gstRate === 18}
-                    radioChange={handleRadioClick}
+                    checked={inputs.gstRate === "18"}
+                    radioChange={handleChange}
                 />
                 <RadioButton
-                    gstRate={28}
+                name="gstRate"
+                    gstRate="28"
                     value="28"
-                    checked={gstRate === 28}
-                    radioChange={handleRadioClick}
+                    checked={inputs.gstRate === "28"}
+                    radioChange={handleChange}
                 />
             </div>
         </main>
