@@ -4,11 +4,15 @@
     margin: 0;
 }
 
+body {
+    background-color: #E7F6F2;
+}
+
 header {
     margin-bottom: 20px;
     background-color: #2C3333;
     color: white;
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
     /* shadow code below is not mine...idk how it works */
     -webkit-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
     -moz-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
@@ -40,6 +44,7 @@ header {
 }
 
 .input-field {
+    border-radius: 5px;
     margin-top: 10px;
     width: 450px;
     height: 45px;
@@ -47,7 +52,7 @@ header {
 }
 
 .gst-buttons {
-    margin-top: 20px;
+    margin: 20px 0 20px 0;
 }
 
 .gst-buttons label {

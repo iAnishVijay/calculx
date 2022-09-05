@@ -6,7 +6,7 @@ export default function Main() {
     const [result, setResult] = useState();
     const [inputs, setInputs] = useState(
         {
-            textInput: 0,
+            price: 0,
             gstRate: ""
         }
     );
@@ -16,39 +16,32 @@ export default function Main() {
             [event.target.name]: event.target.value
         }));
     }
+    const gstPercentages = ["12", "18", "28"];
+    const gstButtons = gstPercentages.map(item => (
+        <RadioButton
+            name="gstRate"
+            gstRate={item}
+            value={item}
+            checked={inputs.gstRate === item}
+            radioChange={handleChange}
+        />
+    ));
     React.useEffect(() => {
-        setResult(inputs.textInput * parseInt(inputs.gstRate) * 0.01);
-    }, [inputs.textInput, inputs.gstRate]);
+        const gstAmount = inputs.price - (inputs.price * (100 / (100 + parseInt(inputs.gstRate))));
+        const gstExclusivePrice = inputs.price - gstAmount;
+        setResult(gstExclusivePrice);
+    }, [inputs.price, inputs.gstRate]);
     return (
         <main className="calculator">
             <InputField
-                name="textInput"
+                name="price"
+                labelText="Amount Including GST"
                 handleChange={handleChange}
             />
-            <h2>{inputs.gstRate && result}</h2>
             <div className="gst-buttons total-center-flex">
-                <RadioButton
-                    name="gstRate"
-                    gstRate="12"
-                    value="12"
-                    checked={inputs.gstRate === "12"}
-                    radioChange={handleChange}
-                />
-                <RadioButton
-                name="gstRate"
-                    gstRate="18"
-                    value="18"
-                    checked={inputs.gstRate === "18"}
-                    radioChange={handleChange}
-                />
-                <RadioButton
-                name="gstRate"
-                    gstRate="28"
-                    value="28"
-                    checked={inputs.gstRate === "28"}
-                    radioChange={handleChange}
-                />
+                {gstButtons}
             </div>
+            <h2>Amount excluding GST: {inputs.gstRate && result}</h2>
         </main>
     )
 }
