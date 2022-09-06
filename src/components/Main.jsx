@@ -41,7 +41,7 @@ export default function Main() {
             <div className="gst-buttons total-center-flex">
                 {gstButtons}
             </div>
-            <h2>Amount excluding GST: {inputs.gstRate && result}</h2>
+            <h3>Amount excluding GST: {inputs.gstRate && result}</h3>
         </main>
     )
 }
