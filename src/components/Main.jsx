@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputField from "./InputField";
 import RadioButton from "./RadioButton";
+import { calculateGst, truncToTwo } from "../util/Calculate";
 
 export default function Main() {
     const [result, setResult] = useState();
@@ -16,7 +17,7 @@ export default function Main() {
             [event.target.name]: event.target.value
         }));
     }
-    const gstPercentages = ["12", "18", "28"];
+    const gstPercentages = ["5", "12", "18", "28"];
     const gstButtons = gstPercentages.map(item => (
         <RadioButton
             name="gstRate"
@@ -27,9 +28,8 @@ export default function Main() {
         />
     ));
     React.useEffect(() => {
-        const gstAmount = inputs.price - (inputs.price * (100 / (100 + parseInt(inputs.gstRate))));
-        const gstExclusivePrice = inputs.price - gstAmount;
-        setResult(gstExclusivePrice);
+        var gstExclusivePrice = calculateGst(inputs.price, parseInt(inputs.gstRate));
+        setResult(truncToTwo(gstExclusivePrice, 2));
     }, [inputs.price, inputs.gstRate]);
     return (
         <main className="calculator">
