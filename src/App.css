@@ -8,25 +8,25 @@ body {
     background-color: #E7F6F2;
 }
 
-header {
+.header {
     margin-bottom: 20px;
     background-color: #2C3333;
     color: white;
-    padding: 20px 50px 20px 50px;
+    padding: 20px 30px 20px 30px;
     /* shadow code below is not mine...idk how it works */
     -webkit-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
     -moz-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
     box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
 }
 
-.total-center-flex {
+.flex-center {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.space-btw-flex {
+.flex-space-btw {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -34,7 +34,7 @@ header {
 }
 
 .header--menus li {
-    margin-right: 10px;
+    margin-right: 30px;
     list-style: none;
 }
 

@@ -38,7 +38,7 @@ export default function Main() {
                 labelText="Amount Including GST"
                 handleChange={handleChange}
             />
-            <div className="gst-buttons total-center-flex">
+            <div className="gst-buttons flex-center">
                 {gstButtons}
             </div>
             <h3>Amount excluding GST: {inputs.gstRate && result}</h3>
