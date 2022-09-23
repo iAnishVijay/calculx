@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1cba2fc1866f4e1a247f",
-    "url": "/calculx/static/css/main.3545d2a2.chunk.css"
+    "revision": "838e0e2c87a797444991",
+    "url": "/calculx/static/css/main.34b72734.chunk.css"
   },
   {
-    "revision": "1cba2fc1866f4e1a247f",
-    "url": "/calculx/static/js/main.1cba2fc1.chunk.js"
+    "revision": "838e0e2c87a797444991",
+    "url": "/calculx/static/js/main.838e0e2c.chunk.js"
   },
   {
     "revision": "aa92928c16c4929721f7",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/calculx/static/js/runtime~main.ae89127c.js"
   },
   {
-    "revision": "a8754dc9efdc8993a6a298e62be34d7a",
+    "revision": "7b7bc01d2a7b353c7d1d44c103c75186",
     "url": "/calculx/index.html"
   }
 ];
