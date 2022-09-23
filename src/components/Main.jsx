@@ -32,7 +32,7 @@ export default function Main() {
         setResult(truncToTwo(gstExclusivePrice, 2));
     }, [inputs.price, inputs.gstRate]);
     return (
-        <main className="calculator">
+        <main className="calculator flex-center">
             <InputField
                 name="price"
                 labelText="Amount Including GST"
@@ -41,7 +41,7 @@ export default function Main() {
             <div className="gst-buttons flex-center">
                 {gstButtons}
             </div>
-            <h3>Amount excluding GST: {inputs.gstRate && result}</h3>
+            <p className="gst-result">Amount excluding GST: {inputs.gstRate && result}</p>
         </main>
     )
 }

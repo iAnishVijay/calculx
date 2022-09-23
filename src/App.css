@@ -12,7 +12,7 @@ body {
     margin-bottom: 20px;
     background-color: #2C3333;
     color: white;
-    padding: 20px 30px 20px 30px;
+    padding: 20px 30px;
     /* shadow code below is not mine...idk how it works */
     -webkit-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
     -moz-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
@@ -39,7 +39,7 @@ body {
 }
 
 .calculator {
-    display: grid;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -51,10 +51,31 @@ body {
     text-indent: 5px;
 }
 
+@media (max-width: 675px) {
+    .input-field{
+        width: 60%;
+    }
+    .gst-buttons {
+        width: 60%;
+    }
+    .header {
+        padding: 2% 5%;
+    }
+    .header--menus li {
+        margin-right: 10%;
+    }
+}
+
 .gst-buttons {
     margin: 20px 0 20px 0;
 }
 
 .gst-buttons label {
+    font-size: 1rem;
     margin: 0 20px 0 5px;
+}
+
+.gst-result {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
