@@ -1,13 +1,13 @@
 {
-  "main.css": "/calculx/static/css/main.9c0ff205.chunk.css",
-  "main.js": "/calculx/static/js/main.b407013f.chunk.js",
-  "main.js.map": "/calculx/static/js/main.b407013f.chunk.js.map",
-  "runtime~main.js": "/calculx/static/js/runtime~main.a20934d0.js",
-  "runtime~main.js.map": "/calculx/static/js/runtime~main.a20934d0.js.map",
-  "static/js/2.8b6489c9.chunk.js": "/calculx/static/js/2.8b6489c9.chunk.js",
-  "static/js/2.8b6489c9.chunk.js.map": "/calculx/static/js/2.8b6489c9.chunk.js.map",
-  "index.html": "/calculx/index.html",
-  "precache-manifest.4f07ba325c9f3ac42a13d10b1ed0ccb4.js": "/calculx/precache-manifest.4f07ba325c9f3ac42a13d10b1ed0ccb4.js",
-  "service-worker.js": "/calculx/service-worker.js",
-  "static/css/main.9c0ff205.chunk.css.map": "/calculx/static/css/main.9c0ff205.chunk.css.map"
+  "files": {
+    "main.css": "/calculx/static/css/main.9ee541f6.css",
+    "main.js": "/calculx/static/js/main.3d45aa8d.js",
+    "index.html": "/calculx/index.html",
+    "main.9ee541f6.css.map": "/calculx/static/css/main.9ee541f6.css.map",
+    "main.3d45aa8d.js.map": "/calculx/static/js/main.3d45aa8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ee541f6.css",
+    "static/js/main.3d45aa8d.js"
+  ]
 }
