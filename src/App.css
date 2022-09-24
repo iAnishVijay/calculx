@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     background-color: #E7F6F2;
 }
 
@@ -34,8 +35,13 @@ body {
 }
 
 .header--menus li {
+    cursor: pointer;
     margin-right: 30px;
     list-style: none;
+}
+
+.header--heading {
+    cursor: pointer;
 }
 
 .calculator {

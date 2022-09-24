@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import InputField from "./InputField";
 import RadioButton from "./RadioButton";
-import { calculateGst, truncToTwo } from "../util/Calculate";
+import { calculateGst, truncToTwo } from "../util/calculate";
 
 export default function Main() {
     const [result, setResult] = useState();
@@ -31,6 +31,7 @@ export default function Main() {
         var gstExclusivePrice = calculateGst(inputs.price, parseInt(inputs.gstRate));
         setResult(truncToTwo(gstExclusivePrice, 2));
     }, [inputs.price, inputs.gstRate]);
+    
     return (
         <main className="calculator flex-center">
             <InputField
