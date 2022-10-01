@@ -4,7 +4,10 @@ import RadioButton from "./RadioButton";
 import { calculateGst, truncToTwo } from "../util/calculate";
 
 export default function Main() {
-    const [result, setResult] = useState();
+    const [result, setResult] = useState( {
+        gstAmount: 0,
+        excludingGst: 0
+    });
     const [inputs, setInputs] = useState(
         {
             price: 0,
@@ -29,7 +32,11 @@ export default function Main() {
     ));
     React.useEffect(() => {
         var gstExclusivePrice = calculateGst(inputs.price, parseInt(inputs.gstRate));
-        setResult(truncToTwo(gstExclusivePrice, 2));
+        setResult((prev) => ({
+            ...prev,
+            gstAmount: truncToTwo(inputs.price - gstExclusivePrice, 3),
+            excludingGst: truncToTwo(gstExclusivePrice, 3)
+        }));
     }, [inputs.price, inputs.gstRate]);
     
     return (
@@ -42,7 +49,8 @@ export default function Main() {
             <div className="gst-buttons flex-space-btw">
                 {gstButtons}
             </div>
-            <p className="gst-result">Amount excluding GST: {inputs.gstRate && result}</p>
+            <p className="gst-result">GST Amount: {inputs.gstRate && result.gstAmount}</p>
+            <p className="gst-result">Amount excluding GST: {inputs.gstRate && result.excludingGst}</p>
         </main>
     )
 }
