@@ -8,7 +8,7 @@ export default function Main() {
     const [inputs, setInputs] = useState(
         {
             price: 0,
-            gstRate: ""
+            gstRate: "18"
         }
     );
     const handleChange = (event) => {
@@ -23,7 +23,7 @@ export default function Main() {
             name="gstRate"
             gstRate={item}
             value={item}
-            checked={inputs.gstRate === item}
+            checked={item === inputs.gstRate }
             radioChange={handleChange}
         />
     ));
@@ -36,10 +36,10 @@ export default function Main() {
         <main className="calculator flex-center">
             <InputField
                 name="price"
-                labelText="Amount Including GST"
+                labelText="Enter Amount Including GST:"
                 handleChange={handleChange}
             />
-            <div className="gst-buttons flex-center">
+            <div className="gst-buttons flex-space-btw">
                 {gstButtons}
             </div>
             <p className="gst-result">Amount excluding GST: {inputs.gstRate && result}</p>
