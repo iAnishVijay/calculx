@@ -4,7 +4,7 @@ import RadioButton from "./RadioButton";
 import { calculateGst, truncToTwo } from "../util/calculate";
 
 export default function Main() {
-    const [result, setResult] = useState( {
+    const [result, setResult] = useState({
         gstAmount: 0,
         excludingGst: 0
     });
@@ -26,7 +26,7 @@ export default function Main() {
             name="gstRate"
             gstRate={item}
             value={item}
-            checked={item === inputs.gstRate }
+            checked={item === inputs.gstRate}
             radioChange={handleChange}
         />
     ));
@@ -38,7 +38,7 @@ export default function Main() {
             excludingGst: truncToTwo(gstExclusivePrice, 3)
         }));
     }, [inputs.price, inputs.gstRate]);
-    
+
     return (
         <main className="calculator flex-center">
             <InputField
@@ -49,8 +49,11 @@ export default function Main() {
             <div className="gst-buttons flex-space-btw">
                 {gstButtons}
             </div>
-            <p className="gst-result">GST Amount: {inputs.gstRate && result.gstAmount}</p>
-            <p className="gst-result">Amount excluding GST: {inputs.gstRate && result.excludingGst}</p>
+            <div className="result-container">
+                <p className="gst-result">GST Amount: {inputs.gstRate && result.gstAmount}</p>
+                <p className="gst-result">Amount excluding GST: {inputs.gstRate && result.excludingGst}</p>
+
+            </div>
         </main>
     )
 }

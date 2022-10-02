@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #E7F6F2;
+    background-color: rgb(244, 244, 244);
 }
 
 .header {
@@ -45,15 +45,17 @@ body {
 }
 
 .input-field {
-    border-radius: 5px;
+    font-size: 1em;
     margin-top: 10px;
     width: 450px;
     height: 45px;
-    text-indent: 5px;
+    text-indent: 10px;
     outline: none;
+    border: 1px solid gray;
+    border-radius: 6px;
 
     @media (max-width: $breakpoint-mobile) {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -62,12 +64,21 @@ body {
 
     @media (max-width: $breakpoint-mobile) {
         width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 .gst-buttons label {
     font-size: 1rem;
     margin: 0 20px 0 5px;
+}
+
+.result-container {
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #16d261;
+    box-shadow: 1px 1px 5px 1px rgb(200, 200, 200);
 }
 
 .gst-result {
