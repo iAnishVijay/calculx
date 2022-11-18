@@ -40,13 +40,13 @@ export default function Main() {
     }, [inputs.price, inputs.gstRate]);
 
     return (
-        <main className="calculator flex-center">
+        <main className="calculator">
             <InputField
                 name="price"
                 labelText="Enter Amount Including GST:"
                 handleChange={handleChange}
             />
-            <div className="gst-buttons flex-space-btw">
+            <div className="gst-buttons">
                 {gstButtons}
             </div>
             <div className="result-container">

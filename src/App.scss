@@ -20,7 +20,7 @@ body {
     box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
 
     @media (max-width: $breakpoint-mobile) {
-        padding: 2% 5%;
+        padding: 6% 3%;
     }
 }
 
@@ -40,13 +40,15 @@ body {
 
 .calculator {
     padding: 1% 3%;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+    gap: 0.5em;
 }
 
 .input-field {
     font-size: 1em;
-    margin-top: 10px;
     width: 450px;
     height: 45px;
     text-indent: 10px;
@@ -57,13 +59,20 @@ body {
     @media (max-width: $breakpoint-mobile) {
         width: 100%;
     }
+    &:focus{
+        border: 2px solid black;
+    }
 }
 
-.gst-buttons {
-    margin: 2%;
 
+.gst-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.2em;
     @media (max-width: $breakpoint-mobile) {
-        width: 60%;
+        margin: 2% 0;
         margin-left: auto;
         margin-right: auto;
     }
@@ -79,6 +88,9 @@ body {
     border-radius: 6px;
     background-color: #16d261;
     box-shadow: 1px 1px 5px 1px rgb(200, 200, 200);
+    @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+    }
 }
 
 .gst-result {
