@@ -1,4 +1,4 @@
-import { truncToTwo } from "./util";
+import { truncToTwo } from "./Util";
 
 export const calculateGst = (...params) => {
     return params.reduce((price, gstRate) => {

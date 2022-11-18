@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import InputField from "./InputField";
 import RadioButton from "./RadioButton";
-import { calculateGst, truncToTwo } from "../util/calculate";
+import { calculateGst, truncToTwo } from "../util/Calculate";
 
 export default function Main() {
     const [result, setResult] = useState({
