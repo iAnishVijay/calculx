@@ -51,8 +51,9 @@ export default function Main() {
             </div>
             <div className="result-container">
                 <p className="gst-result">GST Amount: {inputs.gstRate && result.gstAmount}</p>
+            </div>
+            <div className="result-container">
                 <p className="gst-result">Amount excluding GST: {inputs.gstRate && result.excludingGst}</p>
-
             </div>
         </main>
     )

@@ -20,7 +20,7 @@ body {
     box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
 
     @media (max-width: $breakpoint-mobile) {
-        padding: 6% 3%;
+        padding: 5% 3%;
     }
 }
 
@@ -36,6 +36,7 @@ body {
 
 .header--heading {
     cursor: pointer;
+    font-size: 28px;
 }
 
 .calculator {
@@ -60,7 +61,7 @@ body {
         width: 100%;
     }
     &:focus{
-        border: 2px solid black;
+        border: 2px solid #000000;
     }
 }
 
@@ -84,12 +85,13 @@ body {
 }
 
 .result-container {
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 6px;
     background-color: #16d261;
     box-shadow: 1px 1px 5px 1px rgb(200, 200, 200);
     @media (max-width: $breakpoint-mobile) {
         width: 100%;
+        margin-bottom: 5spx;
     }
 }
 
