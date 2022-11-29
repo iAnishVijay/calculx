@@ -9,12 +9,13 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(244, 244, 244);
+    background-color: #191919;
+    color: #E1E1E1;
 }
 
 .header {
     margin-bottom: 20px;
-    background-color: #2C3333;
+    background-color: #282828;
     color: white;
     padding: 20px 25px;
     box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
@@ -51,17 +52,22 @@ body {
 .input-field {
     font-size: 1em;
     width: 450px;
-    height: 45px;
+    height: 48px;
     text-indent: 10px;
     outline: none;
-    border: 1px solid gray;
+    border: 1px solid rgb(111, 111, 111);
     border-radius: 6px;
+    background-color: #262626;
+    color: #d1d1d1;
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+    }
 
     @media (max-width: $breakpoint-mobile) {
         width: 100%;
     }
     &:focus{
-        border: 2px solid #000000;
+        border: 2px solid #cbcbcb;
     }
 }
 
@@ -87,8 +93,8 @@ body {
 .result-container {
     padding: 12px 15px;
     border-radius: 6px;
-    background-color: #16d261;
-    box-shadow: 1px 1px 5px 1px rgb(200, 200, 200);
+    background-color: #23AB8B;
+    box-shadow: 1px 1px 5px 1px rgb(25, 25, 25);
     @media (max-width: $breakpoint-mobile) {
         width: 100%;
         margin-bottom: 5spx;
@@ -96,6 +102,7 @@ body {
 }
 
 .gst-result {
+    color: #191919;
     font-size: 1.2rem;
     font-weight: 600;
 }
